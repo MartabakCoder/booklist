@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookList</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<div class="header">
+    <a href="#default" class="logo">BookList</a>
+    <div class="header-right">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" href="product.html">Buku</a>
+      <a href="buku_tamu.php">Buku Tamu</a>
+    </div>
+  </div>
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="title">List Buku </h1>
+    </div>
+  </div>
+  <div class="container">
+      <button id="tombolModal" class="button">Tambah Buku</button>
+  </div>
+  <div class="grid-container" id="buku_wrapper" style="min-height: 700px;">
+  </div>
+  <!-- Modal Untuk Menampilkan detail -->
+  <div id="ModalDetail" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h2>Detail Koleksi<span class="close">&times;</span></h2>
+      </div>
+      <div class="modal-body">
+        <div class = "about-wrapper">
+          <div class = "about-left">
+            <div class = "about-left-content">
+              <div>
+                <div class = "shadow">
+                  <div class = "about-img">
+                    <img src = "src/img/overhead-view-stationeries-laptop-beige-background.jpg" alt = "about image">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+    
+          <div class = "about-right">
+            <h1 id="judulBukuDetail" >BookList</h1>
+            <h2 id="penulisBukuDetail">Aplikasi rekomendasi buku</h2>
+    
+            <div class = "about-para">
+              <p id="deskripsiBukuDetail">Membantu para pembaca dalam memilih buku sesuai dengan kebutuhan anda saat ini. Memilihkan anda berdasarkan kategori dan rating dari pengguna lainnya.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Untuk Menambah -->
+  <div id="ModalTambah" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h2>Tambah Koleksi<span class="close">&times;</span></h2>
+      </div>
+      <div class="modal-body">
+          
+          <label for="tbuku">Judul</label>
+          <input type="text" id="tbuku" name="tbuku" placeholder="Judul Buku..">
+      
+          <label for="tpenulis">Penulis</label>
+          <input type="text" id="tpenulis" name="tpenulis" placeholder="Nama Penulis..">
+          
+          <label for="tdeskripsi">Deskripsi</label>
+          <textarea name="tdeskripsi" id="tdeskripsi" cols="30" rows="10" placeholder="Deskripsikan buku anda.."></textarea>
+          
+      </div>
+      <div class="modal-footer">
+        <button class="button" id="TombolSimpan">Simpan</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p align="center">&copy; Copyright 2022 Martabak Code</p>
+  </div>
+  <script>
+    var btn = document.getElementById("tombolModal"); 
+    var span = document.getElementsByClassName("close")[1];
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+  
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+  </script>
+  <script src="src/index.js"></script>
+</body>
+</html>
